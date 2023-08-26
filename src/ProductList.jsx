@@ -18,7 +18,6 @@ const ProductList = () => {
     }
   }
   React.useEffect(() => {
-    console.log('pr',products.length)
     setCurrentProduct({});
   }, [products.length])
   return <div>

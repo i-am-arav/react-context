@@ -12,13 +12,13 @@ const App = () => {
   return (
     <>
       <UserContext.Provider value={user}>
-        <ProductContextProvider>
-          <User />
-          <UserClassComponent />
-          <Product />
-          <ProductList />
-        </ProductContextProvider>
+        <User />
+        <UserClassComponent />
       </UserContext.Provider>
+      <ProductContextProvider>
+        <Product />
+        <ProductList />
+      </ProductContextProvider>
     </>
   );
 };
