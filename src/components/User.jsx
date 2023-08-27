@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import { UserContext } from './App'
-import { ProductContext } from './context/ProductContext';
+import { ProductContext } from '../context/ProductContext';
+import { UserContext } from '../context/UserContext';
 
 const User = () => {
   const user = useContext(UserContext);

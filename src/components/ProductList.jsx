@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
-import { ProductListContext } from "./context/ProductContext";
+import { ProductListContext } from "../context/ProductContext";
 
 const ProductList = () => {
   const [products, setProducts] = useContext(ProductListContext);

@@ -1,24 +1,22 @@
 import React from "react";
-import User from "./User";
-import UserClassComponent from "./UserClassComponent";
+import User from "./components/User";
+import UserClassComponent from "./components/UserClassComponent";
 import ProductContextProvider from "./context/ProductContext";
-import Product from "./Product";
-import ProductList from "./ProductList";
-
-export const UserContext = React.createContext();
-const user = { name: "John", city: "NY" };
+import Product from "./components/Product";
+import ProductList from "./components/ProductList";
+import UserContextProvider from "./context/UserContext";
 
 const App = () => {
   return (
     <>
-      <UserContext.Provider value={user}>
-        <User />
-        <UserClassComponent />
-      </UserContext.Provider>
-      <ProductContextProvider>
-        <Product />
-        <ProductList />
-      </ProductContextProvider>
+      <UserContextProvider>
+        <ProductContextProvider>
+          <User />
+          <UserClassComponent />
+          <Product />
+          <ProductList />
+        </ProductContextProvider>
+      </UserContextProvider>
     </>
   );
 };

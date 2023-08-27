@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { UserContext } from "./App";
+import { UserContext } from "../context/UserContext";
 
 export default class UserClassComponent extends Component {
   render() {
